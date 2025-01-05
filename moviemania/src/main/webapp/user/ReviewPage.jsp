@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ReviewPageUser
-    Created on : Dec 31, 2024, 12:03:48 AM
-    Author     : acer
---%>
-
 <%@page import="Model.Review"%>
 <%@page import="java.util.List"%>
 <%@page import="Model.User"%>
@@ -63,7 +57,6 @@
             padding:15px;
             max-height:100%;
            
-            
         }
         .movie-title {
             font-size: 1.5rem;
