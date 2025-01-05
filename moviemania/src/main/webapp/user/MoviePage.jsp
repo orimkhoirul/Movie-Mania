@@ -1,11 +1,8 @@
-<%-- 
-    Document   : MoviePageUser
-    Created on : Dec 31, 2024, 12:03:23?AM
-    Author     : acer
---%>
-
 <%@page import="Model.User"%>
 <%@page import="Model.Movie"%>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,31 +21,14 @@
       rel="stylesheet"
     />
     <style>
-      /* body {
-        
-        
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Poppins";
-        background-color: #6c5ce7;
-        
-        
-        
-      }*/
-
       body {
         width: 100%;
         height: 100vh;
-
-       
         font-family: "Poppins";
-        
         background-image: url("image/bgAdd.jpeg");
         background-size: cover;
         background-color: #6c5ce7;
-      }
+        }
 
       .container {
         display: grid;
@@ -100,7 +80,6 @@
     </style>
   </head>
   <body>
-      <%-- Display the action parameter value here --%>
       <%
        Movie movie=(Movie) request.getSession().getAttribute("SingleMovie");
        User user=(User) request.getSession().getAttribute("user");
@@ -136,4 +115,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
-
