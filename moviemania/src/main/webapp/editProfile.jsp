@@ -1,9 +1,3 @@
-<%-- 
-    Document   : editUser
-    Created on : Oct 31, 2024, 11:09:03 PM
-    Author     : acer
---%>
-
 <%@page import="Model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
