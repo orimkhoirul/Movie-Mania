@@ -1,12 +1,5 @@
-<%-- 
-    Document   : EditMovie
-    Created on : Jan 5, 2025, 11:04:43 PM
-    Author     : acer
---%>
-
 <%@page import="Model.Movie"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,53 +64,44 @@
             return;
         }
     %>
-
     <div class="container">
         <div class="movie-title">
             <img src="${pageContext.request.contextPath}/<%= movie.getPosterUrl() %>" alt="Movie Poster" />
         </div>
-
         <form action="${pageContext.request.contextPath}/MoviesController" method="post" enctype="multipart/form-data">
             <!-- Hidden inputs -->
             <input type="hidden" name="action" value="editMovie">
             <input type="hidden" name="movieID" value="<%= movie.getMovieID() %>">
             <input type="hidden" name="poster_url" value="<%= movie.getPosterUrl() %>">
-
             <!-- Title -->
             <div class="form-group">
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" class="form-control" value="<%= movie.getTitle() %>" required>
             </div>
-
             <!-- Genre -->
             <div class="form-group">
                 <label for="genre">Genre:</label>
                 <input type="text" id="genre" name="genre" class="form-control" value="<%= movie.getGenre() %>" required>
             </div>
-
             <!-- Release Date -->
             <div class="form-group">
                 <label for="date">Release Date:</label>
                 <input type="date" id="date" name="date" class="form-control" value="<%= movie.getReleaseDate() %>" required>
             </div>
-
             <!-- Description -->
             <div class="form-group">
                 <label for="description">Description:</label>
                 <textarea id="description" name="description" class="form-control" rows="4" required><%= movie.getDescription() %></textarea>
             </div>
-
             <!-- Poster Upload -->
             <div class="form-group">
                 <label for="poster">Upload New Poster:</label>
                 <input type="file" id="poster" name="poster" class="form-control" accept="image/*">
             </div>
-
             <!-- Submit Button -->
             <button type="submit" class="save-btn">Save Changes</button>
         </form>
     </div>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
