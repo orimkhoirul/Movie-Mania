@@ -1,9 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Dao;
-
 import Model.Movie;
 import java.sql.Connection;
 import java.sql.Date;
@@ -15,22 +10,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
-/**
- *
- * @author acer
- */
 public class MoviesDao {
-
     public MoviesDao() {
-    }
-    ;
+    };
     
     private final String url = "jdbc:mysql://localhost:3306/mydb";
     private final String dbUser = "root";
-    private final String dbPassword = "ori2305";
-
-    // Method to add a new movie
+    private final String dbPassword = "";
     public boolean addMovie(String title, String genre, java.util.Date releaseDate, String description, String rating, String posterUrl) throws SQLException {
         String sql = "INSERT INTO movies (title, genre , releaseDate ,description ,poster_url) VALUES (?, ?,?, ?,?)";
         try {
@@ -51,8 +37,6 @@ public class MoviesDao {
             return stmt.executeUpdate() > 0; // Returns true if insertion was successful
         }
     }
-
-    // Method to update an existing movie
     public boolean updateMovie(int movieID, String title, String genre, java.util.Date ReleaseDate, String description, String posterUrl) throws SQLException {
         String sql = "UPDATE movies SET title = ?,genre=?,description = ?,releaseDate=? ,poster_url = ? WHERE movieID = ?";
         try (Connection conn = DriverManager.getConnection(url, dbUser, dbPassword); PreparedStatement stmt = conn.prepareStatement(sql)) {
