@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Login
-    Created on : Dec 31, 2024, 12:00:03 AM
-    Author     : acer
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
 <!DOCTYPE html>
