@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Dao;
-
 import Model.User;
 import static java.lang.System.out;
 import java.sql.Connection;
@@ -18,21 +17,14 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-
-/**
- *
- * @author acer
- */
 public class UsersDao {
 
     private final String url = "jdbc:mysql://localhost:3306/mydb";
     private final String user = "root";
-    private final String pasword = "ori2305";
+    private final String pasword = "";
 
     public UsersDao() {
-    }
-
-    ;
+    };
     
     
     
