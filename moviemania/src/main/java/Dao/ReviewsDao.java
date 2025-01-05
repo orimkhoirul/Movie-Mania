@@ -10,7 +10,7 @@ import java.util.List;
 public class ReviewsDao {
     private final String url = "jdbc:mysql://localhost:3306/mydb";
     private final String dbUser = "root";
-    private final String dbPassword = "ori2305";
+    private final String dbPassword = "";
     public boolean addReview(int movieID, int userID, float rating, String comment) {
         String query = "INSERT INTO reviews (Movies_movieID, Users_UserID, rating, comment, date) VALUES (?, ?, ?, ?, NOW())";
 
